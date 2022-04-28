@@ -11,12 +11,12 @@
     <h2>Current series</h2>
     <div class="wrapper">
       @foreach ($comics as $comic)
-        <div class="card">
+        <a href="/comics/{{ $comic['id'] }}" class="card">
           <div class="thumb">
             <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
           </div>
           <h3>{{ $comic['series'] }}</h3>
-        </div>
+        </a>
       @endforeach
     </div>
     <button class="btn">Load more</button>

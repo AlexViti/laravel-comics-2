@@ -28,7 +28,10 @@
       </div>
       <p>{{ $description }}</p>
     </div>
-    <img src="{{ asset('images/unleash.jpg') }}" alt="">
+    <div class="adv">
+      <div>ADVERTISEMENT</div>
+      <img src="{{ asset('images/unleash.jpg') }}" alt="">
+    </div>
   </div>
   <div class="info">
     <div class="narrow container">

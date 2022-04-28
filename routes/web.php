@@ -33,7 +33,3 @@ foreach ($comics as $comic) {
     return view('guest.pages.comic', $comic);
   })->name('comic');
 }
-
-Route::get('/comics/comic', function () {
-  return view('guest.pages.comics/comic');
-})->name('comic');

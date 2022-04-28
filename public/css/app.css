@@ -230,6 +230,9 @@ main .purchase > *:first-child {
   display: flex;
   justify-content: space-between;
 }
+main .adv div {
+  text-align: right;
+}
 main .info {
   background-color: #f6f6f6;
 }
