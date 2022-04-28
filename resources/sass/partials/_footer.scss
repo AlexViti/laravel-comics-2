@@ -1,0 +1,43 @@
+@import 'partials/variables';
+
+footer {
+  nav {
+    background: url('../images/footer-bg.jpg') no-repeat center center;
+    background-size: cover;
+
+    .container {
+      display: flex;
+
+      & > ul {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 3rem;
+
+        h4 {
+          font-size: 1.5em;
+          text-transform: uppercase;
+        }
+
+        a {
+          color: $light-gray;
+        }
+      }
+    }
+  }
+
+  .bg-logo {
+    background: url('../images/dc-logo-bg.png') no-repeat center right;
+    background-size: 70%;
+    flex-grow: 1;
+  }
+
+  .footer-bottom {
+    background: $footer-gray;
+
+    .btn {
+      font-weight: 500;
+      border: 2px solid $primary;
+    }
+  }
+}

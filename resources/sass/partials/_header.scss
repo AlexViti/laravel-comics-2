@@ -1,0 +1,36 @@
+@import 'variables';
+
+header {
+  text-transform: uppercase;
+
+  .top-bar {
+    background-color: $primary;
+    padding: .5em 0;
+
+    .container {
+      display: flex;
+      justify-content: end;
+
+      & > * +  * {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  nav {
+    padding: 1rem 0;
+    color: #000;
+    background-color: #fff;
+    font-weight: 700;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .active {
+        border-bottom: 2px solid $primary;
+      }
+    }
+  }
+}

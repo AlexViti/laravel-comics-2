@@ -1,0 +1,23 @@
+html {
+  font-family: 'PT Sans Narrow', 'Roboto Condensed', sans-serif;
+  color: white;
+}
+
+.container {
+	width: clamp($min_width, 70%, $max_width);
+	margin: 0 auto;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.btn {
+  padding: 1em;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+// reset list
+ul, ol {
+  list-style: none;
+}
+
+// reset button
+button {
+  color: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
