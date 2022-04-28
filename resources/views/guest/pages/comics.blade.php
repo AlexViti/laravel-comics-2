@@ -3,7 +3,7 @@
 @section('title', 'Comics')
 
 @section('content')
-<main id="comics">
+<main class="dark" id="comics">
   <div class="jumbotron">
     <img src="{{ asset('images/jumbotron.jpg') }}" alt="Comics Jumbo">
   </div>

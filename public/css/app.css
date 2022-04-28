@@ -31,6 +31,9 @@ html {
   width: clamp(400px, 70%, 1200px);
   margin: 0 auto;
 }
+.container.narrow {
+  width: clamp(400px, 50%, 1200px);
+}
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -40,6 +43,22 @@ html {
   padding: 1em;
   text-transform: uppercase;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+[class*=abs-] {
+  position: absolute;
+}
+[class*=abs-][class*=t] {
+  top: 0;
+}
+[class*=abs-][class*=-b] {
+  bottom: 0;
+}
+[class*=abs-][class*=l] {
+  left: 0;
+}
+[class*=abs-][class*=r] {
+  right: 0;
 }
 
 header {
@@ -73,7 +92,14 @@ header nav ul .active {
 
 main {
   text-transform: uppercase;
+}
+main.dark {
+  color: #fff;
   background-color: #1c1c1c;
+}
+main.light {
+  color: #000;
+  background-color: #fff;
 }
 main .jumbotron {
   width: 100%;
@@ -86,6 +112,27 @@ main .jumbotron img {
      object-fit: cover;
   -o-object-position: top center;
      object-position: top center;
+}
+main .cover-heading {
+  height: 5rem;
+  background-color: #0282f9;
+}
+main .cover-heading .container {
+  position: relative;
+}
+main .cover-heading .container .cover {
+  position: absolute;
+  bottom: calc(100% - 4rem);
+  border: 2px solid #fff;
+}
+main .cover-heading .container .cover img {
+  display: block;
+}
+main .cover-heading .container .cover [class*=abs-] {
+  background: #00a9d9;
+  text-align: center;
+  color: #fff;
+  padding: 0.1em 0.2em;
 }
 main .container {
   position: relative;

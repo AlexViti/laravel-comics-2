@@ -2,7 +2,16 @@
 
 main {
   text-transform: uppercase;
-  background-color: $bg-dark;
+
+  &.dark {
+    color: #fff;
+    background-color: $bg-dark;
+  }
+
+  &.light {
+    color: #000;
+    background-color: #fff;
+  }
 
   .jumbotron {
     width: 100%;
@@ -13,6 +22,32 @@ main {
       height: 100%;
       object-fit: cover;
       object-position: top center;
+    }
+  }
+
+  .cover-heading {
+    height: 5rem;
+    background-color: $primary;
+
+    .container {
+      position: relative;
+
+      .cover {
+        position: absolute;
+        bottom: calc(100% - 4rem);
+        border: 2px solid #fff;
+
+        img {
+          display: block;
+        }
+
+        [class*="abs-"] {
+          background: $cover;
+          text-align: center;
+          color: #fff;
+          padding: .1em .2em;
+        }
+      }
     }
   }
 

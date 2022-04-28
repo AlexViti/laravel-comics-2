@@ -6,6 +6,10 @@ html {
 .container {
 	width: clamp($min_width, 70%, $max_width);
 	margin: 0 auto;
+
+  &.narrow {
+    width: clamp($min_width, 50%, $max_width);
+  }
 }
 
 .material-symbols-outlined {
@@ -20,4 +24,24 @@ html {
   padding: 1em;
   text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+[class*="abs-"] {
+  position: absolute;
+
+  &[class*="t"] {
+    top: 0;
+  }
+
+  &[class*="-b"] {
+    bottom: 0;
+  }
+
+  &[class*="l"] {
+    left: 0;
+  }
+
+  &[class*="r"] {
+    right: 0;
+  }
 }
