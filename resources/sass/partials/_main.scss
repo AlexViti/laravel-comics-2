@@ -1,7 +1,8 @@
 @import 'variables';
+@import 'mixins';
 
 main {
-
+  background-color: $bg-dark;
   &#comics {
     text-transform: uppercase;
 
@@ -79,12 +80,8 @@ main {
   }
 
   nav {
-    background: $primary;
-    padding: 1rem 0;
-
     ul {
       display: flex;
-      justify-content: space-around;
       align-items: center;
 
       li {
@@ -92,11 +89,23 @@ main {
         a {
           display: flex;
           align-items: center;
+        }
+      }
+    }
 
-          img {
-            max-height: 50px;
-            max-width: 50px;
-            margin-right: .5rem;
+    &.main-nav {
+      background: $primary;
+      padding: 1rem 0;
+
+      ul {
+        justify-content: space-around;
+        li {
+          a {
+            img {
+              max-height: 50px;
+              max-width: 50px;
+              margin-right: .5rem;
+            }
           }
         }
       }
@@ -180,5 +189,52 @@ main {
     h3 {
       color: #003f5e;
     }
+
+    & > .container {
+      display: flex;
+
+      ul {
+        width: 50%;
+
+        & + ul {
+          margin-left: 2rem;
+        }
+      }
+
+      li {
+        $border: 1px solid #e3e3e3;
+        display: flex;
+        justify-content: space-between;
+        border-top: $border;
+
+        &:last-child {
+          border-bottom: $border;
+        }
+
+        & > * + * {
+          width: 65%;
+        }
+
+        a {
+          cursor: pointer;
+          color: #4fa9db;
+        }
+      }
+    }
+
+    nav {
+      $iconSize: 50px;
+      @for $i from 1 through 4 {
+        @include icon($i, $iconSize);
+      }
+      ul {
+        li {
+          a {
+            justify-content: space-between;
+          }
+        }
+      }
+    }
   }
 }
+

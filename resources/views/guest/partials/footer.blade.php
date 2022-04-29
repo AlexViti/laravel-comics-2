@@ -6,11 +6,9 @@ $footer_nav = [
     'Movies' => 'movies',
     'TV' => 'tv',
     'Games' => 'games',
-    'Collectables' => 'collectables',
     'Videos' => 'videos',
     'Fans' => 'fans',
     'News' => 'news',
-    'Shop' => 'shop'
   ],
   'DC' => [
     'Term Of Use' => '#',

@@ -1,3 +1,12 @@
+@php
+  $nav_menu = [
+    'Digital Comics' => '#',
+    'Shop DC' => '#',
+    'Comic Shop Locator' => '#',
+    'Subscription' => '#'
+  ];
+@endphp
+
 @extends('guest.templates.base')
 
 @section('title', $title)
@@ -35,47 +44,59 @@
   </div>
   <div class="info">
     <div class="narrow container">
-      <div class="wrapper">
+      <ul>
         <h3>Talent</h3>
-        <div class="row">
+        <li>
           <span>Art by:</span>
           <div>
             @foreach ($artists as $artist)
-                <span>{{ $artist }}</span>
-                @if (!$loop->last)
-                    <span>,</span>
-                @endif
+              <a>{{ $artist }}</a>
+              @if (!$loop->last)
+                <span>,</span>
+              @endif
             @endforeach
           </div>
-        </div>
-        <div class="row">
+        </li>
+        <li>
           <span>Written by:</span>
           <div>
             @foreach ($writers as $writer)
-                <span>{{ $writer }}</span>
-                @if (!$loop->last)
-                    <span>,</span>
-                @endif
+              <a>{{ $writer }}</a>
+              @if (!$loop->last)
+                <span>,</span>
+              @endif
             @endforeach
           </div>
-        </div>
-      </div>
-      <div class="wrapper">
+        </li>
+      </ul>
+      <ul>
         <h3>Specs</h3>
-        <div class="row">
+        <li>
           <span>Series:</span>
-          <span>{{ $series }}</span>
-        </div>
-        <div class="row">
+          <a>{{ strtoupper($series) }}</a>
+        </li>
+        <li>
           <span>U.S. Price:</span>
           <span>{{ $price }}</span>
-        </div>
-        <div class="row">
+        </li>
+        <li>
           <span>On Sale Date:</span>
-          <span>{{ date_create($sale_date)->format('M d y') }}</span>
-        </div>
-      </div>
+          <span>{{ date_create($sale_date)->format('M d Y') }}</span>
+        </li>
+      </ul>
     </div>
+    <nav>
+      <ul class="narrow container">
+        @foreach ($nav_menu as $title => $link)
+          <li>
+            <a href="{{ $link }}">
+              <h4>{{ $title }}</h4>
+              <div class="icon-{{ $loop->iteration }}"></div>
+            </a>
+          </li>
+        @endforeach
+      </ul>
+    </nav>
   </div>
 </main>
 @endsection

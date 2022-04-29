@@ -32,7 +32,7 @@ html {
   margin: 0 auto;
 }
 .container.narrow {
-  width: clamp(400px, 50%, 1200px);
+  width: clamp(400px - 5%, 55%, 1200px - 5%);
 }
 
 .material-symbols-outlined {
@@ -94,6 +94,9 @@ header nav ul .active {
   border-bottom: 2px solid #0282f9;
 }
 
+main {
+  background-color: #1c1c1c;
+}
 main#comics {
   text-transform: uppercase;
 }
@@ -159,13 +162,8 @@ main .container .btn {
   display: block;
   cursor: pointer;
 }
-main nav {
-  background: #0282f9;
-  padding: 1rem 0;
-}
 main nav ul {
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 main nav ul li {
@@ -175,7 +173,14 @@ main nav ul li a {
   display: flex;
   align-items: center;
 }
-main nav ul li a img {
+main nav.main-nav {
+  background: #0282f9;
+  padding: 1rem 0;
+}
+main nav.main-nav ul {
+  justify-content: space-around;
+}
+main nav.main-nav ul li a img {
   max-height: 50px;
   max-width: 50px;
   margin-right: 0.5rem;
@@ -239,6 +244,65 @@ main .info {
 main .info h3 {
   color: #003f5e;
 }
+main .info > .container {
+  display: flex;
+}
+main .info > .container ul {
+  width: 50%;
+}
+main .info > .container ul + ul {
+  margin-left: 2rem;
+}
+main .info > .container li {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e3e3e3;
+}
+main .info > .container li:last-child {
+  border-bottom: 1px solid #e3e3e3;
+}
+main .info > .container li > * + * {
+  width: 65%;
+}
+main .info > .container li a {
+  cursor: pointer;
+  color: #4fa9db;
+}
+main .info nav .icon-1 {
+  display: block;
+  background-image: url("../images/cta-icons.png");
+  background-size: 200px 100px;
+  background-position: 0px 0;
+  width: 50px;
+  height: 50px;
+}
+main .info nav .icon-2 {
+  display: block;
+  background-image: url("../images/cta-icons.png");
+  background-size: 200px 100px;
+  background-position: 50px 0;
+  width: 50px;
+  height: 50px;
+}
+main .info nav .icon-3 {
+  display: block;
+  background-image: url("../images/cta-icons.png");
+  background-size: 200px 100px;
+  background-position: 100px 0;
+  width: 50px;
+  height: 50px;
+}
+main .info nav .icon-4 {
+  display: block;
+  background-image: url("../images/cta-icons.png");
+  background-size: 200px 100px;
+  background-position: 150px 0;
+  width: 50px;
+  height: 50px;
+}
+main .info nav ul li a {
+  justify-content: space-between;
+}
 
 footer nav {
   background: url("../images/footer-bg.jpg") no-repeat center center;
@@ -256,6 +320,9 @@ footer nav .container > ul {
 footer nav .container > ul h4 {
   font-size: 1.5em;
   text-transform: uppercase;
+}
+footer nav .container > ul li {
+  line-height: 1.6em;
 }
 footer nav .container > ul a {
   color: #959595;

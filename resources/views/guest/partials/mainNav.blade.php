@@ -23,7 +23,7 @@ $links = [
 ];
 @endphp
 
-<nav>
+<nav class="main-nav">
   <ul class="container">
     @foreach ($links as $link)
       <li>

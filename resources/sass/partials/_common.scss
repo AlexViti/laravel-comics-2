@@ -8,7 +8,7 @@ html {
 	margin: 0 auto;
 
   &.narrow {
-    width: clamp($min_width, 50%, $max_width);
+    width: clamp(calc($min_width - 5%), 55%, calc($max_width - 5%));
   }
 }
 
