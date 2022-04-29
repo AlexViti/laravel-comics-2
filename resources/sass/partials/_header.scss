@@ -40,6 +40,26 @@ header {
 
       .search-bar {
         align-self: center;
+        display: inline-flex;
+        border-bottom: 2px solid $primary;
+
+        input {
+          border: none;
+          outline: none;
+          background: none;
+          width: 100px;
+          padding-bottom: .2rem;
+
+          &::placeholder {
+            text-align: end;
+            color: $color-dark;
+            font-size: 1rem;
+          }
+        }
+
+        i {
+          margin-left: .2em;
+        }
       }
 
       .active,

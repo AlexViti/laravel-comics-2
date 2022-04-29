@@ -40,7 +40,7 @@
         <form>
           <input type="text" name="query" placeholder="Search">
           <button type="submit">
-            <span class="material-symbols-outlined">search</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
       </div>
