@@ -239,6 +239,7 @@ main .adv div {
   text-align: right;
 }
 main .info {
+  border-top: 1px solid #e3e3e3;
   background-color: #f6f6f6;
 }
 main .info h3 {
@@ -268,7 +269,7 @@ main .info > .container li a {
   cursor: pointer;
   color: #4fa9db;
 }
-main .info nav .icon-1 {
+main .info nav .icon-1 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
   background-size: 200px 100px;
@@ -276,7 +277,10 @@ main .info nav .icon-1 {
   width: 50px;
   height: 50px;
 }
-main .info nav .icon-2 {
+main .info nav .icon-1:hover .icon {
+  background-position: 0px bottom;
+}
+main .info nav .icon-2 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
   background-size: 200px 100px;
@@ -284,7 +288,10 @@ main .info nav .icon-2 {
   width: 50px;
   height: 50px;
 }
-main .info nav .icon-3 {
+main .info nav .icon-2:hover .icon {
+  background-position: 50px bottom;
+}
+main .info nav .icon-3 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
   background-size: 200px 100px;
@@ -292,7 +299,10 @@ main .info nav .icon-3 {
   width: 50px;
   height: 50px;
 }
-main .info nav .icon-4 {
+main .info nav .icon-3:hover .icon {
+  background-position: 100px bottom;
+}
+main .info nav .icon-4 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
   background-size: 200px 100px;
@@ -300,8 +310,12 @@ main .info nav .icon-4 {
   width: 50px;
   height: 50px;
 }
+main .info nav .icon-4:hover .icon {
+  background-position: 150px bottom;
+}
 main .info nav ul li a {
   justify-content: space-between;
+  color: #9f9f9f;
 }
 
 footer nav {

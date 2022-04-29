@@ -1,12 +1,18 @@
 @mixin icon($position, $size: 50px) {
 
   .icon-#{$position} {
-    display: block;
-    background-image: url('../images/cta-icons.png');
-    background-size: ($size * 4) ($size * 2);
-    background-position: (($position - 1) * $size) 0;
-    width: $size;
-    height: $size;
+    .icon {
+      display: block;
+      background-image: url('../images/cta-icons.png');
+      background-size: ($size * 4) ($size * 2);
+      background-position: (($position - 1) * $size) 0;
+      width: $size;
+      height: $size;
+    }
+
+    &:hover .icon {
+      background-position: (($position - 1) * $size) bottom;
+    }
   }
 
 }

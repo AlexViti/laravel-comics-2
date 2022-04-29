@@ -89,9 +89,9 @@
       <ul class="narrow container">
         @foreach ($nav_menu as $title => $link)
           <li>
-            <a href="{{ $link }}">
-              <h4>{{ $title }}</h4>
-              <div class="icon-{{ $loop->iteration }}"></div>
+            <a href="{{ $link }}" class="icon-{{ $loop->iteration }}">
+              <h4>{{ strtoupper($title) }}</h4>
+              <div class="icon"></div>
             </a>
           </li>
         @endforeach
