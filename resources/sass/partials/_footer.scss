@@ -1,6 +1,7 @@
 @import 'partials/variables';
 
 footer {
+  font-size: .9em;
   nav {
     background: url('../images/footer-bg.jpg') no-repeat center center;
     background-size: cover;
@@ -9,6 +10,7 @@ footer {
       display: flex;
 
       & > ul {
+        padding: 3rem;
         width: 40%;
         display: flex;
         flex-wrap: wrap;
@@ -20,7 +22,7 @@ footer {
         }
 
         li {
-          line-height: 1.6em;
+          line-height: 1.5em;
         }
 
         a {
@@ -32,7 +34,7 @@ footer {
 
   .bg-logo {
     background: url('../images/dc-logo-bg.png') no-repeat center right;
-    background-size: 70%;
+    background-size: 80%;
     flex-grow: 1;
   }
 

@@ -187,6 +187,7 @@ main nav.main-nav ul li a img {
 }
 main.comic > .container {
   display: flex;
+  padding: 4rem 0;
 }
 main.comic > .container .wrapper + * {
   margin-left: 2rem;
@@ -216,6 +217,12 @@ main.comic .cover-heading .container .cover [class*=abs-] {
 main.comic h1 {
   color: #003f5e;
   text-transform: uppercase;
+  font-size: 2.1rem;
+}
+main.comic p {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.6em;
 }
 main .purchase {
   display: flex;
@@ -223,9 +230,10 @@ main .purchase {
   font-family: "Roboto Condensed", sans-serif;
   background-color: #55ba59;
   border-bottom: 1px solid #3a823e;
+  margin: 1rem 0;
 }
 main .purchase > * {
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
 }
 main .purchase > * + * {
   border-left: 1px solid #3a823e;
@@ -247,6 +255,7 @@ main .info h3 {
 }
 main .info > .container {
   display: flex;
+  padding: 2rem 0;
 }
 main .info > .container ul {
   width: 50%;
@@ -255,6 +264,7 @@ main .info > .container ul + ul {
   margin-left: 2rem;
 }
 main .info > .container li {
+  padding: 0.5em 0;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #e3e3e3;
@@ -266,16 +276,23 @@ main .info > .container li > * + * {
   width: 65%;
 }
 main .info > .container li a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.85em;
+  font-weight: 500;
   cursor: pointer;
   color: #4fa9db;
+}
+main .info nav {
+  margin-top: 4rem;
+  border-top: 1px solid #e3e3e3;
 }
 main .info nav .icon-1 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
-  background-size: 200px 100px;
+  background-size: 160px 80px;
   background-position: 0px 0;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 main .info nav .icon-1:hover .icon {
   background-position: 0px bottom;
@@ -283,41 +300,52 @@ main .info nav .icon-1:hover .icon {
 main .info nav .icon-2 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
-  background-size: 200px 100px;
-  background-position: 50px 0;
-  width: 50px;
-  height: 50px;
+  background-size: 160px 80px;
+  background-position: 40px 0;
+  width: 40px;
+  height: 40px;
 }
 main .info nav .icon-2:hover .icon {
-  background-position: 50px bottom;
+  background-position: 40px bottom;
 }
 main .info nav .icon-3 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
-  background-size: 200px 100px;
-  background-position: 100px 0;
-  width: 50px;
-  height: 50px;
+  background-size: 160px 80px;
+  background-position: 80px 0;
+  width: 40px;
+  height: 40px;
 }
 main .info nav .icon-3:hover .icon {
-  background-position: 100px bottom;
+  background-position: 80px bottom;
 }
 main .info nav .icon-4 .icon {
   display: block;
   background-image: url("../images/cta-icons.png");
-  background-size: 200px 100px;
-  background-position: 150px 0;
-  width: 50px;
-  height: 50px;
+  background-size: 160px 80px;
+  background-position: 120px 0;
+  width: 40px;
+  height: 40px;
 }
 main .info nav .icon-4:hover .icon {
-  background-position: 150px bottom;
+  background-position: 120px bottom;
+}
+main .info nav ul li {
+  border-left: 1px solid #e3e3e3;
+}
+main .info nav ul li:last-child {
+  border-right: 1px solid #e3e3e3;
 }
 main .info nav ul li a {
+  padding: 0.5em 1em;
   justify-content: space-between;
   color: #9f9f9f;
+  align-items: flex-start;
 }
 
+footer {
+  font-size: 0.9em;
+}
 footer nav {
   background: url("../images/footer-bg.jpg") no-repeat center center;
   background-size: cover;
@@ -326,6 +354,7 @@ footer nav .container {
   display: flex;
 }
 footer nav .container > ul {
+  padding: 3rem;
   width: 40%;
   display: flex;
   flex-wrap: wrap;
@@ -336,14 +365,14 @@ footer nav .container > ul h4 {
   text-transform: uppercase;
 }
 footer nav .container > ul li {
-  line-height: 1.6em;
+  line-height: 1.5em;
 }
 footer nav .container > ul a {
   color: #959595;
 }
 footer .bg-logo {
   background: url("../images/dc-logo-bg.png") no-repeat center right;
-  background-size: 70%;
+  background-size: 80%;
   flex-grow: 1;
 }
 footer .footer-bottom {

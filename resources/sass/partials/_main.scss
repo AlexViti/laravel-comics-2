@@ -116,6 +116,7 @@ main {
 
     & > .container {
       display: flex;
+      padding: 4rem 0;
 
       .wrapper + * {
         margin-left: 2rem;
@@ -151,6 +152,13 @@ main {
     h1 {
       color: #003f5e;
       text-transform: uppercase;
+      font-size: 2.1rem;
+    }
+
+    p {
+      font-family: 'Roboto Condensed', sans-serif;
+      letter-spacing: .5px;
+      line-height: 1.6em;
     }
   }
 
@@ -161,9 +169,10 @@ main {
     background-color: $purchase;
     $border: 1px solid #3a823e;
     border-bottom: $border;
+    margin: 1rem 0;
 
     & > * {
-      padding: .5rem 2rem;
+      padding: 1rem 2rem;
 
       & + * {
         border-left: $border;
@@ -195,6 +204,7 @@ main {
 
     & > .container {
       display: flex;
+      padding: 2rem 0;
 
       ul {
         width: 50%;
@@ -205,6 +215,7 @@ main {
       }
 
       li {
+        padding: .5em 0;
         display: flex;
         justify-content: space-between;
         border-top: $border;
@@ -218,6 +229,9 @@ main {
         }
 
         a {
+          font-family: 'Roboto Condensed', sans-serif;
+          font-size: .85em;
+          font-weight: 500;
           cursor: pointer;
           color: #4fa9db;
         }
@@ -225,15 +239,25 @@ main {
     }
 
     nav {
-      $iconSize: 50px;
+      margin-top: 4rem;
+      border-top: $border;
+
+      $iconSize: 40px;
       @for $i from 1 through 4 {
         @include icon($i, $iconSize);
       }
       ul {
         li {
+          border-left: $border;
+
+          &:last-child {
+            border-right: $border;
+          }
           a {
+            padding: .5em 1em;
             justify-content: space-between;
             color: #9f9f9f;
+            align-items: flex-start;
           }
         }
       }
