@@ -80,18 +80,34 @@ header .top-bar .container > * + * {
   margin-left: 1rem;
 }
 header nav {
-  padding: 1rem 0;
   color: #000;
   background-color: #fff;
   font-weight: 700;
 }
 header nav ul {
+  height: 100%;
   display: flex;
   justify-content: space-between;
+}
+header nav ul li {
+  display: flex;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+header nav ul li a {
+  display: flex;
   align-items: center;
 }
-header nav ul .active {
-  border-bottom: 2px solid #0282f9;
+header nav ul .search-bar {
+  align-self: center;
+}
+header nav ul .active,
+header nav ul li:not(:first-child):hover {
+  border-bottom-color: #0282f9;
+  color: #0282f9;
+}
+header nav ul img {
+  margin: 1rem 0;
 }
 
 main {

@@ -18,18 +18,38 @@ header {
   }
 
   nav {
-    padding: 1rem 0;
     color: #000;
     background-color: #fff;
     font-weight: 700;
 
     ul {
+      height: 100%;
       display: flex;
       justify-content: space-between;
-      align-items: center;
 
-      .active {
-        border-bottom: 2px solid $primary;
+      li {
+        $border: 5px solid transparent;
+        display: flex;
+        border-top: $border;
+        border-bottom: $border;
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .search-bar {
+        align-self: center;
+      }
+
+      .active,
+      li:not(:first-child):hover {
+        border-bottom-color: $primary;
+        color: $primary;
+      }
+
+      img {
+        margin: 1rem 0;
       }
     }
   }
